@@ -45,15 +45,67 @@ const HeroSection = () => {
             start: '50% 0%',
             end: '150% 0%',
             scrub: true,
-            markers: {
-                startColor: "fuchsia",
-                endColor: "fuchsia",
-              },
+            // markers: {
+            //     startColor: "fuchsia",
+            //     endColor: "fuchsia",
+            //   },
         }
       }
     );
 
   }, []);
+
+
+  useGSAP(() => {
+    gsap.fromTo(
+      "#text",
+      {
+        y: '150vh',
+        x: "-30vw",
+      },
+      {
+        y: '300vh',
+        x: '-30vw',
+        scrollTrigger: {
+            trigger: '#hero',
+            start: '150% 0%',
+            end: '300% 0%',
+            scrub: true,
+            // markers: {
+            //     startColor: "fuchsia",
+            //     endColor: "fuchsia",
+            //   },
+        }
+      }
+    );
+
+  }, []);
+
+//   useGSAP(() => {
+//     gsap.fromTo(
+//       "#text",
+//       {
+//         y: '300vh',
+//         x: "-30vw",
+//       },
+//       {
+//         // y: '400vh',
+//         // x: '-30vw',
+//         scrollTrigger: {
+//             trigger: '#hero',
+//             start: '300% 0%',
+//             end: '400% 0%',
+//             scrub: true,
+//             pin: true,
+//             markers: {
+//                 startColor: "fuchsia",
+//                 endColor: "fuchsia",
+//               },
+//         }
+//       }
+//     );
+
+//   }, []);
 
   
   return (

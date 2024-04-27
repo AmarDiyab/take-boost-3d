@@ -7,3 +7,8 @@ body {
   background: linear-gradient(315.01deg, #FF710D 8.31%, #FFB800 88.22%);
   color: white;
 }
+
+.outline-text {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+}
