@@ -1,6 +1,5 @@
-import { OrbitControls, ScrollControls } from "@react-three/drei";
+/* eslint-disable react/no-unknown-property */
 import { Canvas } from "@react-three/fiber";
-import React, { useRef } from "react";
 import { Model } from "../../WawaOffice";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -9,9 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
-  const aboutId = document.getElementById("#about");
-
-  console.log(aboutId);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -28,54 +24,10 @@ const HeroSection = () => {
           start: "0% 0%",
           end: "50% 0%",
           scrub: true,
-          // toggleActions: 'restart none none none',
-        //   markers: {
-        //     startColor: "fuchsia",
-        //     endColor: "fuchsia",
-        //   },
         },
       }
     );
 
-    // gsap.fromTo(
-    //   "#text",
-    //   {
-    //     y: "50vh",
-    //   },
-    //   {
-    //     y: "100vh",
-    //     scrollTrigger: {
-    //       trigger: aboutId,
-    //       start: "bottom 50%",
-    //       end: "bottom 0%",
-    //       scrub: true,
-    //     //   markers: {
-    //     //     startColor: "purple",
-    //     //     endColor: "purple",
-    //     //   },
-    //     },
-    //   }
-    // );
-
-    // gsap.fromTo(
-    //   "#text",
-    //   {
-    //     y: "100vh",
-    //   },
-    //   {
-    //     y: "150vh",
-    //     scrollTrigger: {
-    //       trigger: "#hero",
-    //       start: "bottom 0%",
-    //       end: "top 10%",
-    //       scrub: true,
-    //       markers: {
-    //         startColor: "purple",
-    //         endColor: "purple",
-    //       },
-    //     },
-    //   }
-    // );
   }, []);
 
   useGSAP(() => {
@@ -100,8 +52,10 @@ const HeroSection = () => {
         }
       }
     );
+
   }, []);
 
+  
   return (
     <>
       <div className="pl-12 h-screen w-[100vw] flex items-center" id="hero">
