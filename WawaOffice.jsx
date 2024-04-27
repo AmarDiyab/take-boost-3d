@@ -17,17 +17,20 @@ export function Model(props) {
 
   const groupRef = useRef();
 
+  const hero = document.getElementById('hero');
+
   useGSAP(() => {
     gsap.to(groupRef.current.rotation, {
       y: Math.PI * 2,
       scrollTrigger: {
-        trigger: groupRef.current,
-        start: 0,
-        end: 500,
+        trigger: hero,
+        start: '0% 0%',
+        end: '150% 0%',
         scrub: true,
-        
+
       }
     });
+
   }, []);
  
 
