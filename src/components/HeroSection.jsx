@@ -8,106 +8,122 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
+  //   useGSAP(() => {
+  //     gsap.fromTo(
+  //       "#text",
+  //       {
+  //         x: 0,
+  //         y: 0,
+  //       },
+  //       {
+  //         y: '65vh',
+  //         x: "-30vw",
+  //         scrollTrigger: {
+  //           trigger: "#hero",
+  //           start: "0% 0%",
+  //           end: "50% 0%",
+  //           scrub: true,
+  //         },
+  //       }
+  //     );
+
+  //   }, []);
+
+  //   useGSAP(() => {
+  //     gsap.fromTo(
+  //       "#text",
+  //       {
+  //         y: '65vh',
+  //         x: "-30vw",
+  //       },
+  //       {
+  //         y: '150vh',
+  //         x: '-30vw',
+  //         scrollTrigger: {
+  //             trigger: '#hero',
+  //             start: '50% 0%',
+  //             end: '150% 0%',
+  //             scrub: true,
+  //             // markers: {
+  //             //     startColor: "fuchsia",
+  //             //     endColor: "fuchsia",
+  //             //   },
+  //         }
+  //       }
+  //     );
+
+  //   }, []);
+
+  //   useGSAP(() => {
+  //     gsap.fromTo(
+  //       "#text",
+  //       {
+  //         y: '150vh',
+  //         x: "-30vw",
+  //       },
+  //       {
+  //         y: '300vh',
+  //         x: '-30vw',
+  //         scrollTrigger: {
+  //             trigger: '#hero',
+  //             start: '150% 0%',
+  //             end: '300% 0%',
+  //             scrub: true,
+  //             // markers: {
+  //             //     startColor: "fuchsia",
+  //             //     endColor: "fuchsia",
+  //             //   },
+  //         }
+  //       }
+  //     );
+
+  //   }, []);
+
+  //   useGSAP(() => {
+  //     gsap.fromTo(
+  //       "#text",
+  //       {
+  //         y: '300vh',
+  //         x: "-30vw",
+  //       },
+  //       {
+  //         // y: '400vh',
+  //         // x: '-30vw',
+  //         scrollTrigger: {
+  //             trigger: '#hero',
+  //             start: '300% 0%',
+  //             end: '400% 0%',
+  //             scrub: true,
+  //             pin: true,
+  //             markers: {
+  //                 startColor: "fuchsia",
+  //                 endColor: "fuchsia",
+  //               },
+  //         }
+  //       }
+  //     );
+
+  //   }, []);
 
   useGSAP(() => {
-    gsap.fromTo(
-      "#text",
-      {
-        x: 0,
-        y: 0,
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#text",
+        start: "0% 0%",
+        end: "1000% 0%",
+        scrub: true,
+        pin: true,
       },
-      {
-        y: '65vh',
-        x: "-30vw",
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "0% 0%",
-          end: "50% 0%",
-          scrub: true,
-        },
-      }
-    );
+    });
 
+    timeline.fromTo("#text", { y: 0, x: 0 }, { x: "-30vw" });
+    timeline.to("#text", { x: "-30vw" });
+    timeline.to("#text", { x: "-30vw" });
+    timeline.to("#text", { x: "-30vw" });
+    timeline.to("#text", { x: "-30vw" });
+    timeline.to("#text", { x: "-30vw" });
   }, []);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      "#text",
-      {
-        y: '65vh',
-        x: "-30vw",
-      },
-      {
-        y: '150vh',
-        x: '-30vw',
-        scrollTrigger: {
-            trigger: '#hero',
-            start: '50% 0%',
-            end: '150% 0%',
-            scrub: true,
-            // markers: {
-            //     startColor: "fuchsia",
-            //     endColor: "fuchsia",
-            //   },
-        }
-      }
-    );
-
-  }, []);
-
-
-  useGSAP(() => {
-    gsap.fromTo(
-      "#text",
-      {
-        y: '150vh',
-        x: "-30vw",
-      },
-      {
-        y: '300vh',
-        x: '-30vw',
-        scrollTrigger: {
-            trigger: '#hero',
-            start: '150% 0%',
-            end: '300% 0%',
-            scrub: true,
-            // markers: {
-            //     startColor: "fuchsia",
-            //     endColor: "fuchsia",
-            //   },
-        }
-      }
-    );
-
-  }, []);
-
-//   useGSAP(() => {
-//     gsap.fromTo(
-//       "#text",
-//       {
-//         y: '300vh',
-//         x: "-30vw",
-//       },
-//       {
-//         // y: '400vh',
-//         // x: '-30vw',
-//         scrollTrigger: {
-//             trigger: '#hero',
-//             start: '300% 0%',
-//             end: '400% 0%',
-//             scrub: true,
-//             pin: true,
-//             markers: {
-//                 startColor: "fuchsia",
-//                 endColor: "fuchsia",
-//               },
-//         }
-//       }
-//     );
-
-//   }, []);
-
-  
   return (
     <>
       <div className="pl-12 h-screen w-[100vw] flex items-center" id="hero">

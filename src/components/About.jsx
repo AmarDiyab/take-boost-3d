@@ -5,9 +5,9 @@ import gsap from "gsap";
 const About = () => {
   useGSAP(() => {
     gsap.fromTo("#circle", {
-        y: 200
+        y: 100
     }, {
-        y: -100,
+        y: -400,
         scrollTrigger: {
             target: '#circle',
             // start: 'top bottom',

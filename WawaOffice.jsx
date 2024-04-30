@@ -25,7 +25,7 @@ export function Model(props) {
       scrollTrigger: {
         trigger: hero,
         start: '0% 0%',
-        end: '500% 0%',
+        end: '2000% 0%',
         scrub: true,
       }
     });
