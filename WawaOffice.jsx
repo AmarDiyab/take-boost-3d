@@ -18,21 +18,14 @@ export function Model(props) {
   const groupRef = useRef();
   const meshRef = useRef();
 
-  const hero = document.getElementById('hero');
-  const last = document.getElementById("last");
-
   useGSAP(() => {
     gsap.to(meshRef.current.rotation, {
       y: Math.PI * 2,
       scrollTrigger: {
-        trigger: document.querySelector("body"),
-        start: '0% 0%',
-        end: "bottom top", // End at the center of the last element
+        trigger: document.body,
+        start: 'top top',
+        end: "bottom top",
         scrub: true,
-        // markers: {
-        //   startColor: 'yellow',
-        //   endColor: "yellow"
-        // }
       }
     });
   });

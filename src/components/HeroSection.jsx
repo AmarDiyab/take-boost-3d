@@ -12,7 +12,7 @@ const HeroSection = () => {
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: document.querySelector("body"),
+        trigger: document.body,
         start: "top top",
         end: "bottom top",
         scrub: true,

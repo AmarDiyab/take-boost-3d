@@ -7,192 +7,191 @@ import { useRef } from "react";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger, TextPlugin, useGSAP);
 
 const IngredientsSection = () => {
-  // useGSAP(() => {
-  //   gsap.to("#ingredient-section", {
-  //     scrollTrigger: {
-  //       trigger: "#ingredient-section",
-  //       pin: true,
-  //       pinSpacing: true,
-  //       scrub: true,
-  //       start: "0% 0%",
-  //       end: "2000% 0%",
-  //       // markers: {
-  //       //   startColor: "blue",
-  //       //   endColor: "blue",
-  //       // },
-  //     },
-  //   });
-  // }, []);
+  useGSAP(() => {
+    gsap.to("#ingredient-section", {
+      scrollTrigger: {
+        trigger: "#ingredient-section",
+        pin: true,
+        pinSpacing: true,
+        scrub: true,
+        start: "0% 0%",
+        end: "2000% 0%",
+        markers: {
+          startColor: "blue",
+          endColor: "blue",
+        },
+      },
+    });
+  }, []);
 
-  // useGSAP(() => {
-  //   gsap.to("#blue-molecule-1", {
-  //     opacity: 0,
-  //     scale: 2,
-  //     rotation: 45,
-  //     stagger: 0.5,
-  //     scrollTrigger: {
-  //       trigger: "#ingredient-section",
-  //       start: "0% 0%",
-  //       end: "200% 0%",
-  //       scrub: true,
-  //       // markers: {
-  //       //   startColor: "yellow",
-  //       //   endColor: "yellow",
-  //       // },
-  //     },
-  //   });
-  // }, []);
+  useGSAP(() => {
+    const ingredientSectionTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#ingredient-section",
+        start: "top top",
+        end: "bottom+=1000 top",
+        scrub: true,
+      },
+    });
 
-  // useGSAP(() => {
-  //   gsap.to(document.body, {
-  //     background:
-  //       "linear-gradient(155.92deg, rgb(146, 157, 255) 5.36%, rgba(63, 82, 255, 0) 85.08%)",
-  //     overwrite: "auto",
-  //     duration: 0,
-  //     scrollTrigger: {
-  //       trigger: "#pin-container",
-  //       start: "10% 0%",
-  //       end: "10% 0%",
-  //       toggleActions: "play none none reverse",
-  //     },
-  //   });
-  // }, []);
+    // BLUE MOLECULE ANIMATION
+    ingredientSectionTimeline.to(".blue-molecule", {
+      opacity: 1,
+      scale: 1.5,
+      rotation: 45,
+      stagger: 0.5,
+    });
+    ingredientSectionTimeline.to(".blue-molecule", {
+      opacity: 0,
+      scale: 2,
+      rotation: 90,
+      stagger: 0.5,
+    });
+    // BG TRANSITION 1
+    ingredientSectionTimeline.to(document.body, {
+      background: "rgb(111, 0, 255)",
+      duration: 0,
+    });
+    // OUTLINE TRANSITION 1
+    ingredientSectionTimeline.to(
+      ".main-text-1",
+      {
+        className: "text-7xl font-bold main-text-1 outline-text",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(
+      ".main-text-2",
+      {
+        className: "text-7xl font-bold main-text-2",
+      },
+      "<"
+    );
+    // TEXT TRANSITION 1
+    ingredientSectionTimeline.to(
+      ".benefit-text-1",
+      {
+        text: "Supports Immune System Function",
+        overwrite: "auto",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(
+      ".benefit-text-2",
+      {
+        text: "Rich in Antioxidants",
+        overwrite: "auto",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(
+      ".benefit-text-3",
+      {
+        text: "Natural Anti-inflammatory",
+        overwrite: "auto",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(
+      ".benefit-text-4",
+      {
+        text: "Helps Fight Common Cold",
+        overwrite: "auto",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(".benefit-text-5", {
+      text: "100mg of Vitamin C per serving",
+      overwrite: "auto",
+    }),
 
-  // useGSAP(() => {
-  //   gsap.to("#benefit-text", {
-  //     text: "hello this is a sample text",
-  //     overwrite: "auto",
-  //     scrollTrigger: {
-  //       trigger: "#pin-container",
-  //       start: "10% 0%",
-  //       end: "30% 0%",
-  //       scrub: true,
-  //       // markers: {
-  //       //   startColor: "yellow",
-  //       //   endColor: "yellow",
-  //       // },
-  //     },
-  //   });
-  // }, []);
+    // ORANGE ANIMATION
+      ingredientSectionTimeline.to(".orange-slice", {
+        opacity: 1,
+        scale: 1.5,
+        rotation: 45,
+        stagger: 0.5,
+      });
+    ingredientSectionTimeline.to(".orange-slice", {
+      opacity: 0,
+      scale: 2,
+      rotation: 90,
+      stagger: 0.5,
+    });
+    // BG TRANSITION 2
+    ingredientSectionTimeline.to(document.body, {
+      background: "#acb3ff",
+      duration: 0,
+    });
+    // OUTLINE TRANSITION 1
+    ingredientSectionTimeline.to(
+      ".main-text-2",
+      {
+        className: "text-7xl font-bold main-text-1 outline-text",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(
+      ".main-text-3",
+      {
+        className: "text-7xl font-bold main-text-3",
+      },
+      "<"
+    );
+    // TEXT TRANSITION 2
+    ingredientSectionTimeline.to(
+      ".benefit-text-1",
+      {
+        text: "HELLO",
+        overwrite: "auto",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(
+      ".benefit-text-2",
+      {
+        text: "HELLO in HEY",
+        overwrite: "auto",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(
+      ".benefit-text-3",
+      {
+        text: "HEYYAH Anti-HOL",
+        overwrite: "auto",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(
+      ".benefit-text-4",
+      {
+        text: "LOCOCOC",
+        overwrite: "auto",
+      },
+      "<"
+    );
+    ingredientSectionTimeline.to(".benefit-text-5", {
+      text: "2050mg of CDD C per serving",
+      overwrite: "auto",
+    }),
 
-  // useGSAP(() => {
-  //   gsap.to(document.body, {
-  //     background:
-  //       "linear-gradient(155.92deg, rgb(146, 157, 255) 5.36%, #afb6ff",
-  //     overwrite: "auto",
-  //     duration: 0,
-  //     scrollTrigger: {
-  //       trigger: "#pin-container",
-  //       start: "30% 0%",
-  //       end: "30% 0%",
-  //       toggleActions: "play none none reverse",
-  //       // markers: {
-  //       //   startColor: "fuchsia",
-  //       //   endColor: "fuchsia",
-  //       // },
-  //     },
-  //   });
-  // }, []);
-
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     "#orange",
-  //     {
-  //       opacity: 0,
-  //       rotate: 45,
-  //       scale: 0.5,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       rotate: 120,
-  //       scale: 1.5,
-  //       stagger: 0.1,
-  //       scrollTrigger: {
-  //         trigger: "#pin-container",
-  //         start: "10%, 0%",
-  //         end: "20% 0%",
-  //         scrub: true,
-  //         // markers: {
-  //         //   startColor: "fuchsia",
-  //         //   endColor: "fuchsia",
-  //         // },
-  //       },
-  //     }
-  //   );
-  // }, []);
-
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     "#orange",
-  //     {
-  //       opacity: 1,
-  //       rotate: 120,
-  //       scale: 1.5,
-  //     },
-  //     {
-  //       opacity: 0,
-  //       rotate: 150,
-  //       scale: 2,
-  //       stagger: 0.1,
-  //       scrollTrigger: {
-  //         trigger: "#pin-container",
-  //         start: "20%, 0%",
-  //         end: "30% 0%",
-  //         scrub: true,
-  //       },
-  //     }
-  //   );
-  // }, []);
-
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     "#zinc",
-  //     {
-  //       opacity: 0,
-  //       rotate: 45,
-  //       scale: 0.5,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       rotate: 120,
-  //       scale: 1.5,
-  //       stagger: 0.1,
-  //       scrollTrigger: {
-  //         trigger: "#pin-container",
-  //         start: "30%, 0%",
-  //         end: "40% 0%",
-  //         scrub: true,
-  //       },
-  //     }
-  //   );
-  // }, []);
-
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     "#zinc",
-  //     {
-  //       opacity: 1,
-  //       rotate: 120,
-  //       scale: 1.5,
-  //     },
-  //     {
-  //       opacity: 0,
-  //       rotate: 150,
-  //       scale: 2,
-  //       stagger: 0.1,
-  //       scrollTrigger: {
-  //         trigger: "#pin-container",
-  //         start: "40%, 0%",
-  //         end: "50% 0%",
-  //         scrub: true,
-  //       },
-  //     }
-  //   );
-  // }, []);
+    ingredientSectionTimeline.to(".zinc-piece", {
+      opacity: 1,
+      scale: 1.5,
+      rotation: 45,
+      stagger: 0.5,
+    });
+    ingredientSectionTimeline.to(".zinc-piece", {
+      opacity: 0,
+      scale: 2,
+      rotation: 90,
+      stagger: 0.5,
+    });
+  }, []);
 
   return (
     <>
@@ -215,117 +214,105 @@ const IngredientsSection = () => {
             <div className="h-screen flex justify-between items-center relative">
               <div className="flex flex-col gap-3">
                 <p>INGREDIENTS</p>
-                <h4 className="text-7xl font-bold">ELDERBERRY</h4>
-                <h4 className="text-7xl font-bold outline-text">VITAMIN C</h4>
-                <h4 className="text-7xl font-bold outline-text">ZINC</h4>
+                <h4 className="text-7xl font-bold main-text-1">ELDERBERRY</h4>
+                <h4 className="text-7xl font-bold outline-text main-text-2">VITAMIN C</h4>
+                <h4 className="text-7xl font-bold outline-text main-text-3">ZINC</h4>
               </div>
               <div className="flex flex-col gap-0 mr-[5rem]">
                 <p className="mb-2">BENEFITS</p>
-                <h5 className="my-1 text-xl" id="benefit-text">
+                <h5 className="my-1 text-xl benefit-text-1">
                   01. Improves Common Cold Symptoms
                 </h5>
                 <hr />
-                <h5 className="my-1 text-xl" id="benefit-text">
+                <h5 className="my-1 text-xl benefit-text-2">
                   02. Holds Antioxidant Properties
                 </h5>
                 <hr />
-                <h5 className="my-1 text-xl" id="benefit-text">
+                <h5 className="my-1 text-xl benefit-text-3">
                   03. Promotes Glowing Skin
                 </h5>
                 <hr />
-                <h5 className="my-1 text-xl" id="benefit-text">
+                <h5 className="my-1 text-xl benefit-text-4">
                   04. Enhances Brain Function
                 </h5>
                 <hr />
-                <p className="mt-5 text-xs">
+                <p className="mt-5 text-xs benefit-text-5">
                   BOOST has 100mg of Vitamin C per serving
                 </p>
               </div>
               <img
                 src={blueMolecule}
                 alt="blue-molecule"
-                className="absolute -top-[7%] left-[10%]"
+                className="blue-molecule absolute -top-[7%] left-[10%] opacity-0"
                 width={250}
-                id="blue-molecule-1"
               />
               <img
                 src={blueMolecule}
                 alt="blue-molecule"
-                className="absolute -top-[10%] right-[5%]"
+                className="blue-molecule absolute -top-[10%] right-[5%] opacity-0"
                 width={350}
-                id="blue-molecule-1"
               />
               <img
                 src={blueMolecule}
                 alt="blue-molecule"
-                className="absolute -bottom-[15%] left-[7%]"
+                className="blue-molecule absolute -bottom-[15%] left-[7%] opacity-0"
                 width={350}
-                id="blue-molecule-1"
               />
               <img
                 src={blueMolecule}
                 alt="blue-molecule"
-                className="absolute -bottom-[5%] right-[10%]"
+                className="blue-molecule absolute -bottom-[5%] right-[10%] opacity-0"
                 width={250}
-                id="blue-molecule-1"
               />
 
               <img
                 src={orange}
                 alt="orange"
-                className="absolute -top-[7%] left-[10%] opacity-0"
+                className="orange-slice absolute -top-[7%] left-[10%] opacity-0"
                 width={200}
-                id="orange"
               />
               <img
                 src={orange}
                 alt="orange"
-                className="absolute -top-[10%] right-[5%] opacity-0"
+                className="orange-slice absolute -top-[10%] right-[5%] opacity-0"
                 width={250}
-                id="orange"
               />
               <img
                 src={orange}
                 alt="orange"
-                className="absolute -bottom-[15%] left-[7%] opacity-0"
+                className="orange-slice absolute -bottom-[15%] left-[7%] opacity-0"
                 width={250}
-                id="orange"
               />
               <img
                 src={orange}
                 alt="orange"
-                className="absolute -bottom-[5%] right-[10%] opacity-0"
+                className="orange-slice absolute -bottom-[5%] right-[10%] opacity-0"
                 width={200}
-                id="orange"
               />
 
               <img
                 src={zinc}
                 alt="zinc"
-                className="absolute -top-[7%] left-[10%] opacity-0"
+                className="zinc-piece absolute -top-[7%] left-[10%] opacity-0"
                 width={200}
-                id="zinc"
               />
               <img
                 src={zinc}
                 alt="zinc"
-                className="absolute -top-[10%] right-[5%] opacity-0"
+                className="zinc-piece absolute -top-[10%] right-[5%] opacity-0"
                 width={250}
-                id="zinc"
               />
               <img
                 src={zinc}
                 alt="zinc"
-                className="absolute -bottom-[15%] left-[7%] opacity-0"
+                className="zinc-piece absolute -bottom-[15%] left-[7%] opacity-0"
                 width={250}
-                id="zinc"
               />
               <img
                 src={zinc}
                 alt="zinc"
-                className="absolute -bottom-[5%] right-[10%] opacity-0"
+                className="zinc-piece absolute -bottom-[5%] right-[10%] opacity-0"
                 width={200}
-                id="zinc"
               />
             </div>
           </div>
