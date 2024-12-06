@@ -30,10 +30,6 @@ const HeroSection = () => {
 
   }, [])
 
-  // useGSAP(() => {
-   
-  // }, [])
-
   return (
     <>
       <div className="pl-12 h-screen w-[100vw] flex items-center relative" id="hero">

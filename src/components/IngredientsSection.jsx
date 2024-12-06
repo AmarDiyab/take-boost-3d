@@ -3,29 +3,12 @@ import gsap from "gsap";
 import blueMolecule from "../assets/blue-molecule.png";
 import orange from "../assets/orange.png";
 import zinc from "../assets/zinc.png";
-import { useRef } from "react";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin, useGSAP);
 
 const IngredientsSection = () => {
-  useGSAP(() => {
-    gsap.to("#ingredient-section", {
-      scrollTrigger: {
-        trigger: "#ingredient-section",
-        pin: true,
-        pinSpacing: true,
-        scrub: true,
-        start: "0% 0%",
-        end: "2000% 0%",
-        markers: {
-          startColor: "blue",
-          endColor: "blue",
-        },
-      },
-    });
-  }, []);
 
   useGSAP(() => {
     const ingredientSectionTimeline = gsap.timeline({
@@ -34,6 +17,7 @@ const IngredientsSection = () => {
         start: "top top",
         end: "bottom+=1000 top",
         scrub: true,
+        pin: "#ingredient-section"
       },
     });
 
