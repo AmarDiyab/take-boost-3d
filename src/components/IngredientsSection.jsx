@@ -11,192 +11,192 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
 const IngredientsSection = () => {
-  useGSAP(() => {
-    gsap.to("#ingredient-section", {
-      scrollTrigger: {
-        trigger: "#ingredient-section",
-        pin: true,
-        pinSpacing: true,
-        scrub: true,
-        start: "0% 0%",
-        end: "2000% 0%",
-        markers: {
-          startColor: "blue",
-          endColor: "blue",
-        },
-      },
-    });
-  }, []);
+  // useGSAP(() => {
+  //   gsap.to("#ingredient-section", {
+  //     scrollTrigger: {
+  //       trigger: "#ingredient-section",
+  //       pin: true,
+  //       pinSpacing: true,
+  //       scrub: true,
+  //       start: "0% 0%",
+  //       end: "2000% 0%",
+  //       // markers: {
+  //       //   startColor: "blue",
+  //       //   endColor: "blue",
+  //       // },
+  //     },
+  //   });
+  // }, []);
 
-  useGSAP(() => {
-    gsap.to("#blue-molecule-1", {
-      opacity: 0,
-      scale: 2,
-      rotation: 45,
-      stagger: 0.5,
-      scrollTrigger: {
-        trigger: "#ingredient-section",
-        start: "0% 0%",
-        end: "200% 0%",
-        scrub: true,
-        // markers: {
-        //   startColor: "yellow",
-        //   endColor: "yellow",
-        // },
-      },
-    });
-  }, []);
+  // useGSAP(() => {
+  //   gsap.to("#blue-molecule-1", {
+  //     opacity: 0,
+  //     scale: 2,
+  //     rotation: 45,
+  //     stagger: 0.5,
+  //     scrollTrigger: {
+  //       trigger: "#ingredient-section",
+  //       start: "0% 0%",
+  //       end: "200% 0%",
+  //       scrub: true,
+  //       // markers: {
+  //       //   startColor: "yellow",
+  //       //   endColor: "yellow",
+  //       // },
+  //     },
+  //   });
+  // }, []);
 
-  useGSAP(() => {
-    gsap.to(document.body, {
-      background:
-        "linear-gradient(155.92deg, rgb(146, 157, 255) 5.36%, rgba(63, 82, 255, 0) 85.08%)",
-      overwrite: "auto",
-      duration: 0,
-      scrollTrigger: {
-        trigger: "#pin-container",
-        start: "10% 0%",
-        end: "10% 0%",
-        toggleActions: "play none none reverse",
-      },
-    });
-  }, []);
+  // useGSAP(() => {
+  //   gsap.to(document.body, {
+  //     background:
+  //       "linear-gradient(155.92deg, rgb(146, 157, 255) 5.36%, rgba(63, 82, 255, 0) 85.08%)",
+  //     overwrite: "auto",
+  //     duration: 0,
+  //     scrollTrigger: {
+  //       trigger: "#pin-container",
+  //       start: "10% 0%",
+  //       end: "10% 0%",
+  //       toggleActions: "play none none reverse",
+  //     },
+  //   });
+  // }, []);
 
-  useGSAP(() => {
-    gsap.to("#benefit-text", {
-      text: "hello this is a sample text",
-      overwrite: "auto",
-      scrollTrigger: {
-        trigger: "#pin-container",
-        start: "10% 0%",
-        end: "30% 0%",
-        scrub: true,
-        markers: {
-          startColor: "yellow",
-          endColor: "yellow",
-        },
-      },
-    });
-  }, []);
+  // useGSAP(() => {
+  //   gsap.to("#benefit-text", {
+  //     text: "hello this is a sample text",
+  //     overwrite: "auto",
+  //     scrollTrigger: {
+  //       trigger: "#pin-container",
+  //       start: "10% 0%",
+  //       end: "30% 0%",
+  //       scrub: true,
+  //       // markers: {
+  //       //   startColor: "yellow",
+  //       //   endColor: "yellow",
+  //       // },
+  //     },
+  //   });
+  // }, []);
 
-  useGSAP(() => {
-    gsap.to(document.body, {
-      background:
-        "linear-gradient(155.92deg, rgb(146, 157, 255) 5.36%, #afb6ff",
-      overwrite: "auto",
-      duration: 0,
-      scrollTrigger: {
-        trigger: "#pin-container",
-        start: "30% 0%",
-        end: "30% 0%",
-        toggleActions: "play none none reverse",
-        // markers: {
-        //   startColor: "fuchsia",
-        //   endColor: "fuchsia",
-        // },
-      },
-    });
-  }, []);
+  // useGSAP(() => {
+  //   gsap.to(document.body, {
+  //     background:
+  //       "linear-gradient(155.92deg, rgb(146, 157, 255) 5.36%, #afb6ff",
+  //     overwrite: "auto",
+  //     duration: 0,
+  //     scrollTrigger: {
+  //       trigger: "#pin-container",
+  //       start: "30% 0%",
+  //       end: "30% 0%",
+  //       toggleActions: "play none none reverse",
+  //       // markers: {
+  //       //   startColor: "fuchsia",
+  //       //   endColor: "fuchsia",
+  //       // },
+  //     },
+  //   });
+  // }, []);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      "#orange",
-      {
-        opacity: 0,
-        rotate: 45,
-        scale: 0.5,
-      },
-      {
-        opacity: 1,
-        rotate: 120,
-        scale: 1.5,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: "#pin-container",
-          start: "10%, 0%",
-          end: "20% 0%",
-          scrub: true,
-          markers: {
-            startColor: "fuchsia",
-            endColor: "fuchsia",
-          },
-        },
-      }
-    );
-  }, []);
+  // useGSAP(() => {
+  //   gsap.fromTo(
+  //     "#orange",
+  //     {
+  //       opacity: 0,
+  //       rotate: 45,
+  //       scale: 0.5,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       rotate: 120,
+  //       scale: 1.5,
+  //       stagger: 0.1,
+  //       scrollTrigger: {
+  //         trigger: "#pin-container",
+  //         start: "10%, 0%",
+  //         end: "20% 0%",
+  //         scrub: true,
+  //         // markers: {
+  //         //   startColor: "fuchsia",
+  //         //   endColor: "fuchsia",
+  //         // },
+  //       },
+  //     }
+  //   );
+  // }, []);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      "#orange",
-      {
-        opacity: 1,
-        rotate: 120,
-        scale: 1.5,
-      },
-      {
-        opacity: 0,
-        rotate: 150,
-        scale: 2,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: "#pin-container",
-          start: "20%, 0%",
-          end: "30% 0%",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+  // useGSAP(() => {
+  //   gsap.fromTo(
+  //     "#orange",
+  //     {
+  //       opacity: 1,
+  //       rotate: 120,
+  //       scale: 1.5,
+  //     },
+  //     {
+  //       opacity: 0,
+  //       rotate: 150,
+  //       scale: 2,
+  //       stagger: 0.1,
+  //       scrollTrigger: {
+  //         trigger: "#pin-container",
+  //         start: "20%, 0%",
+  //         end: "30% 0%",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      "#zinc",
-      {
-        opacity: 0,
-        rotate: 45,
-        scale: 0.5,
-      },
-      {
-        opacity: 1,
-        rotate: 120,
-        scale: 1.5,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: "#pin-container",
-          start: "30%, 0%",
-          end: "40% 0%",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+  // useGSAP(() => {
+  //   gsap.fromTo(
+  //     "#zinc",
+  //     {
+  //       opacity: 0,
+  //       rotate: 45,
+  //       scale: 0.5,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       rotate: 120,
+  //       scale: 1.5,
+  //       stagger: 0.1,
+  //       scrollTrigger: {
+  //         trigger: "#pin-container",
+  //         start: "30%, 0%",
+  //         end: "40% 0%",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      "#zinc",
-      {
-        opacity: 1,
-        rotate: 120,
-        scale: 1.5,
-      },
-      {
-        opacity: 0,
-        rotate: 150,
-        scale: 2,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: "#pin-container",
-          start: "40%, 0%",
-          end: "50% 0%",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+  // useGSAP(() => {
+  //   gsap.fromTo(
+  //     "#zinc",
+  //     {
+  //       opacity: 1,
+  //       rotate: 120,
+  //       scale: 1.5,
+  //     },
+  //     {
+  //       opacity: 0,
+  //       rotate: 150,
+  //       scale: 2,
+  //       stagger: 0.1,
+  //       scrollTrigger: {
+  //         trigger: "#pin-container",
+  //         start: "40%, 0%",
+  //         end: "50% 0%",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
   return (
     <>
-      <div className="mt-[10rem] mx-12 ">
+      <div className="mt-[10rem] mx-12 " id="last">
         <p className="flex flex-col items-start ml-10 text-[11vw] font-bold leading-[1]">
           <span className="">INGREDIENTS</span>
           <span className="flex-auto self-end">

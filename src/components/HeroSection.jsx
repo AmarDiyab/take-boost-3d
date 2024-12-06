@@ -5,128 +5,38 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const HeroSection = () => {
-  //   useGSAP(() => {
-  //     gsap.fromTo(
-  //       "#text",
-  //       {
-  //         x: 0,
-  //         y: 0,
-  //       },
-  //       {
-  //         y: '65vh',
-  //         x: "-30vw",
-  //         scrollTrigger: {
-  //           trigger: "#hero",
-  //           start: "0% 0%",
-  //           end: "50% 0%",
-  //           scrub: true,
-  //         },
-  //       }
-  //     );
-
-  //   }, []);
-
-  //   useGSAP(() => {
-  //     gsap.fromTo(
-  //       "#text",
-  //       {
-  //         y: '65vh',
-  //         x: "-30vw",
-  //       },
-  //       {
-  //         y: '150vh',
-  //         x: '-30vw',
-  //         scrollTrigger: {
-  //             trigger: '#hero',
-  //             start: '50% 0%',
-  //             end: '150% 0%',
-  //             scrub: true,
-  //             // markers: {
-  //             //     startColor: "fuchsia",
-  //             //     endColor: "fuchsia",
-  //             //   },
-  //         }
-  //       }
-  //     );
-
-  //   }, []);
-
-  //   useGSAP(() => {
-  //     gsap.fromTo(
-  //       "#text",
-  //       {
-  //         y: '150vh',
-  //         x: "-30vw",
-  //       },
-  //       {
-  //         y: '300vh',
-  //         x: '-30vw',
-  //         scrollTrigger: {
-  //             trigger: '#hero',
-  //             start: '150% 0%',
-  //             end: '300% 0%',
-  //             scrub: true,
-  //             // markers: {
-  //             //     startColor: "fuchsia",
-  //             //     endColor: "fuchsia",
-  //             //   },
-  //         }
-  //       }
-  //     );
-
-  //   }, []);
-
-  //   useGSAP(() => {
-  //     gsap.fromTo(
-  //       "#text",
-  //       {
-  //         y: '300vh',
-  //         x: "-30vw",
-  //       },
-  //       {
-  //         // y: '400vh',
-  //         // x: '-30vw',
-  //         scrollTrigger: {
-  //             trigger: '#hero',
-  //             start: '300% 0%',
-  //             end: '400% 0%',
-  //             scrub: true,
-  //             pin: true,
-  //             markers: {
-  //                 startColor: "fuchsia",
-  //                 endColor: "fuchsia",
-  //               },
-  //         }
-  //       }
-  //     );
-
-  //   }, []);
 
   useGSAP(() => {
-    const timeline = gsap.timeline({
+    const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#text",
-        start: "0% 0%",
-        end: "1000% 0%",
+        trigger: document.querySelector("body"),
+        start: "top top",
+        end: "bottom top",
         scrub: true,
-        pin: true,
-      },
-    });
+        pin: "#canvas",
+        markers: true,
+      }
+    })
 
-    timeline.fromTo("#text", { y: 0, x: 0 }, { x: "-30vw" });
-    timeline.to("#text", { x: "-30vw" });
-    timeline.to("#text", { x: "-30vw" });
-    timeline.to("#text", { x: "-30vw" });
-    timeline.to("#text", { x: "-30vw" });
-    timeline.to("#text", { x: "-30vw" });
-  }, []);
+    tl
+    .fromTo("#canvas", {x: 0}, { x: "-35vw" })
+    .to("#canvas", {x: "-35vw"})
+    .to("#canvas", {x: "-35vw"})
+    .to("#canvas", {x: "-35vw"})
+    .to("#canvas", {x: "-35vw"})
+
+  }, [])
+
+  // useGSAP(() => {
+   
+  // }, [])
 
   return (
     <>
-      <div className="pl-12 h-screen w-[100vw] flex items-center" id="hero">
+      <div className="pl-12 h-screen w-[100vw] flex items-center relative" id="hero">
         <h1 className="text-[11vw] leading-[0.9] font-bold ">
           BECAUSE BEING SICK SUCKS{" "}
           <span className="text-xl inline-block max-w-[200px] font-normal ml-5">
@@ -134,7 +44,7 @@ const HeroSection = () => {
           </span>
         </h1>
 
-        <Canvas className="mr-10 w-full z-50 absolute top-0 left-10 " id="text">
+        <Canvas className="ml-10 w-full z-50 top-0 left-10 relative" id="canvas">
           <ambientLight intensity={1} />
           {/* <OrbitControls enableZoom={false} /> */}
           <Model />

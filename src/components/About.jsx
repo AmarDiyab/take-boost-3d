@@ -1,25 +1,39 @@
 // import arrow from "../assets/arrow-down.svg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const About = () => {
   useGSAP(() => {
-    gsap.fromTo("#circle", {
-        y: 100
-    }, {
+    gsap.fromTo(
+      "#circle",
+      {
+        y: 100,
+      },
+      {
         y: -400,
         scrollTrigger: {
-            target: '#circle',
-            // start: 'top bottom',
-            // end: 'bottom top',
-            scrub: true,
-            // markers: {
-            //     startColor: 'purple',
-            //     endColor: 'purple',
-            // }
-        }
-    }
-);
+          target: "#circle",
+          // start: 'top bottom',
+          // end: 'bottom top',
+          scrub: true,
+          // markers: {
+          //     startColor: 'purple',
+          //     endColor: 'purple',
+          // }
+        },
+      }
+    );
+
+    gsap.to("#circle-text", {
+      y: -100,
+      scrollTrigger: {
+        target: "#circle",
+        scrub: true,
+      }
+    })
   }, []);
 
   return (
@@ -29,7 +43,7 @@ const About = () => {
         className="border border-white rounded-full h-[80vh] w-[80vh] flex justify-center items-center text-8xl font-semibold -ml-10"
         id="circle"
       >
-        <p className="flex flex-col items-end ml-10">
+        <p className="flex flex-col items-end ml-10" id="circle-text">
           <span className="1">STAY</span>
           <span className="flex-auto self-start">SICK 🤙 </span>
           <span className="3">🤧 NOT</span>

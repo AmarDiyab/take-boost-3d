@@ -10,32 +10,37 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 export function Model(props) {
   const { nodes, materials } = useGLTF('/src/assets/model/WawaOffice.glb')
 
   const groupRef = useRef();
+  const meshRef = useRef();
 
   const hero = document.getElementById('hero');
+  const last = document.getElementById("last");
 
   useGSAP(() => {
-    gsap.to(groupRef.current.rotation, {
+    gsap.to(meshRef.current.rotation, {
       y: Math.PI * 2,
       scrollTrigger: {
-        trigger: hero,
+        trigger: document.querySelector("body"),
         start: '0% 0%',
-        end: '2000% 0%',
+        end: "bottom top", // End at the center of the last element
         scrub: true,
+        // markers: {
+        //   startColor: 'yellow',
+        //   endColor: "yellow"
+        // }
       }
     });
-
-  }, []);
+  });
  
 
   return (
     <group {...props} dispose={null} ref={groupRef}>
-      <mesh geometry={nodes['01_office'].geometry} material={materials['01']} />
+      <mesh geometry={nodes['01_office'].geometry} material={materials['01']} ref={meshRef} />
       {/* <mesh geometry={nodes['02_library'].geometry} material={materials['02']} position={[0, 2.114, -2.23]} />
       <mesh geometry={nodes['03_attic'].geometry} material={materials['03']} position={[-1.97, 4.227, -2.199]} /> */}
     </group>
