@@ -17,7 +17,7 @@ const HeroSection = () => {
         end: "bottom top",
         scrub: true,
         pin: "#canvas",
-        markers: true,
+        // markers: true,
       }
     })
 

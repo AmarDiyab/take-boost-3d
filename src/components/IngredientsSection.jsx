@@ -15,7 +15,7 @@ const IngredientsSection = () => {
       scrollTrigger: {
         trigger: "#ingredient-section",
         start: "top top",
-        end: "bottom+=1000 top",
+        end: "bottom+=5000 top",
         scrub: true,
         pin: "#ingredient-section"
       },
