@@ -9,11 +9,12 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import model from './assets/model/WawaOffice.glb';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('')
+  const { nodes, materials } = useGLTF(model)
 
   const groupRef = useRef();
   const meshRef = useRef();
@@ -39,4 +40,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/src/assets/model/WawaOffice.glb')
+useGLTF.preload(model)
