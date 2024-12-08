@@ -13,7 +13,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/src/assets/model/WawaOffice.glb')
+  const { nodes, materials } = useGLTF('')
 
   const groupRef = useRef();
   const meshRef = useRef();
