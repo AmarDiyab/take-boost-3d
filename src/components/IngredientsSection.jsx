@@ -108,8 +108,13 @@ const IngredientsSection = () => {
     // BG TRANSITION 2
     ingredientSectionTimeline.to(document.body, {
       background: "#acb3ff",
+      color: "black",
       duration: 0,
     });
+    // ingredientSectionTimeline.to([".main-text-1", ".main-text-2", ".main-text-3", ".outline-text"], {
+    //   color: "black",
+    //   duration: 0.5,
+    // });
     // OUTLINE TRANSITION 1
     ingredientSectionTimeline.to(
       ".main-text-2",
@@ -129,7 +134,7 @@ const IngredientsSection = () => {
     ingredientSectionTimeline.to(
       ".benefit-text-1",
       {
-        text: "HELLO",
+        text: "Helps Balance Hormones",
         overwrite: "auto",
       },
       "<"
@@ -137,7 +142,7 @@ const IngredientsSection = () => {
     ingredientSectionTimeline.to(
       ".benefit-text-2",
       {
-        text: "HELLO in HEY",
+        text: "Maintain Heart Health",
         overwrite: "auto",
       },
       "<"
@@ -145,7 +150,7 @@ const IngredientsSection = () => {
     ingredientSectionTimeline.to(
       ".benefit-text-3",
       {
-        text: "HEYYAH Anti-HOL",
+        text: "Aids in Digestion",
         overwrite: "auto",
       },
       "<"
@@ -153,13 +158,13 @@ const IngredientsSection = () => {
     ingredientSectionTimeline.to(
       ".benefit-text-4",
       {
-        text: "LOCOCOC",
+        text: "Act as a Powerful Anti-Oxidant",
         overwrite: "auto",
       },
       "<"
     );
     ingredientSectionTimeline.to(".benefit-text-5", {
-      text: "2050mg of CDD C per serving",
+      text: "10mg of Zinc per serving",
       overwrite: "auto",
     }),
 
@@ -175,6 +180,10 @@ const IngredientsSection = () => {
       rotation: 90,
       stagger: 0.5,
     });
+    ingredientSectionTimeline.to(document.body, {
+      background: "#fffcf4",
+      duration: 0,
+    });
   }, []);
 
   return (
@@ -183,12 +192,12 @@ const IngredientsSection = () => {
         <p className="flex flex-col items-start ml-10 text-[11vw] font-bold leading-[1]">
           <span className="">INGREDIENTS</span>
           <span className="flex-auto self-end">
-            <h1 className="text-[11vw] leading-[1] font-bold flex items-center ">
+            <p className="text-[11vw] leading-[1] font-bold flex items-center ">
               <span className="text-xl flex flex-col font-normal">
                 <p>AND YOU,</p> <p>OF COURSE.</p>
               </span>
               YOUR MOM
-            </h1>
+            </p>
           </span>
           <span className="">WILL LOVE</span>
         </p>
@@ -302,8 +311,6 @@ const IngredientsSection = () => {
           </div>
         </div>
       </div>
-
-      <div className="h-[500vh]"></div>
     </>
   );
 };

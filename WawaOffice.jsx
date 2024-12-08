@@ -20,7 +20,7 @@ export function Model(props) {
 
   useGSAP(() => {
     gsap.to(meshRef.current.rotation, {
-      y: Math.PI * 2,
+      y: Math.PI * 10,
       scrollTrigger: {
         trigger: document.body,
         start: 'top top',
@@ -29,7 +29,6 @@ export function Model(props) {
       }
     });
   });
- 
 
   return (
     <group {...props} dispose={null} ref={groupRef}>

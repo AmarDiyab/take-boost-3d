@@ -14,15 +14,19 @@ const HeroSection = () => {
       scrollTrigger: {
         trigger: document.body,
         start: "top top",
-        end: "bottom top",
+        end: "bottom-=700 bottom",
         scrub: true,
         pin: "#canvas",
-        // markers: true,
+        markers: true,
       }
     })
 
     tl
     .fromTo("#canvas", {x: 0}, { x: "-35vw" })
+    .to("#canvas", {x: "-35vw"})
+    .to("#canvas", {x: "-35vw"})
+    .to("#canvas", {x: "-35vw"})
+    .to("#canvas", {x: "-35vw"})
     .to("#canvas", {x: "-35vw"})
     .to("#canvas", {x: "-35vw"})
     .to("#canvas", {x: "-35vw"})
