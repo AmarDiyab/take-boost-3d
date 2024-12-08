@@ -17,7 +17,7 @@ const HeroSection = () => {
         end: "bottom+=5000 bottom",
         scrub: true,
         pin: "#canvas",
-        markers: true,
+        // markers: true,
       }
     })
 
