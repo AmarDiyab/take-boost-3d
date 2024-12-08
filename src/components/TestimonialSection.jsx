@@ -14,10 +14,11 @@ const TestimonialSection = () => {
         start: "top bottom",
           end: "bottom bottom",
           scrub: true,
-          markers: {
-            startColor: "purple",
-            endColor: "purple",
-          }}
+          // markers: {
+          //   startColor: "purple",
+          //   endColor: "purple",
+          // }
+          }
     })
 
     testimonyTimeline.fromTo(
@@ -45,10 +46,11 @@ const TestimonialSection = () => {
           start: "center-=300px bottom",
             end: "bottom bottom",
             scrub: true,
-            markers: {
-              startColor: "yellow",
-              endColor: "yellow",
-            }}
+            // markers: {
+            //   startColor: "yellow",
+            //   endColor: "yellow",
+            // }
+            }
       })
 
       myTl.to("#testimonial-card-1", { y: "50px" }, "<")

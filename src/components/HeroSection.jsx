@@ -14,7 +14,7 @@ const HeroSection = () => {
       scrollTrigger: {
         trigger: document.body,
         start: "top top",
-        end: "bottom-=700 bottom",
+        end: "bottom bottom",
         scrub: true,
         pin: "#canvas",
         markers: true,
