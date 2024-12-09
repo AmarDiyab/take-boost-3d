@@ -194,7 +194,7 @@ const IngredientsSection = () => {
           <span className="flex-auto self-end">
             <p className="text-[11vw] leading-[1] font-bold flex items-center ">
               <span className="text-xl flex flex-col font-normal">
-                <p>AND YOU,</p> <p>OF COURSE.</p>
+                <span>AND YOU,</span> <span>OF COURSE.</span>
               </span>
               YOUR MOM
             </p>
