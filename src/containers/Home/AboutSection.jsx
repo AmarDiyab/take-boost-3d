@@ -1,11 +1,10 @@
-// import arrow from "../assets/arrow-down.svg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const About = () => {
+const AboutSection = () => {
   useGSAP(() => {
     gsap.fromTo(
       "#circle",
@@ -69,4 +68,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

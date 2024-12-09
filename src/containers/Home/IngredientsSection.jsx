@@ -1,8 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import blueMolecule from "../assets/blue-molecule.png";
-import orange from "../assets/orange.png";
-import zinc from "../assets/zinc.png";
+import blueMolecule from "../../assets/blue-molecule.png";
+import orange from "../../assets/orange.png";
+import zinc from "../../assets/zinc.png";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

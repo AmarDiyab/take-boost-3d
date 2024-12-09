@@ -1,4 +1,5 @@
 import { ReactLenis } from '@studio-freight/react-lenis';
+import PropTypes from 'prop-types';
 
 const SmoothScrolling = ({children}) => {
     return (
@@ -7,5 +8,9 @@ const SmoothScrolling = ({children}) => {
         </ReactLenis>
       );
 }
+
+SmoothScrolling.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 export default SmoothScrolling;
