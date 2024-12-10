@@ -1,7 +1,8 @@
 import gsap from 'gsap'
-import AccordionComponent from '../../components/AccordionComponent'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Accordion, AccordionItem } from '@nextui-org/accordion'
+import { IoIosClose } from 'react-icons/io'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 const IngredientsAccordion = () => {
@@ -32,7 +33,16 @@ const IngredientsAccordion = () => {
             <h2 className='text-[10rem] font-extrabold leading-[6rem]'>INSIDE?</h2>
         </div>
 
-        <AccordionComponent />
+        <Accordion>
+        <AccordionItem
+          key="1"
+          aria-label="Accordion 1"
+          indicator={<IoIosClose size={60} />}
+          title="BRAND"
+          className="[&_span]:text-white [&_span]:font-medium [&_span]:text-2xl [&_span]:ml-8 [&>h2>button>span]:-rotate-45"
+        >                
+            </AccordionItem>
+        </Accordion>
     </div>
   )
 }

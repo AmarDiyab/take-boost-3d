@@ -35,7 +35,7 @@ const HeroSection = () => {
   }, [])
 
   return (
-    <>
+    <div>
       <div className="pl-12 h-screen w-[100vw] flex items-center relative" id="hero">
         <h1 className="text-[11vw] leading-[0.9] font-bold ">
           BECAUSE BEING SICK SUCKS{" "}
@@ -50,7 +50,7 @@ const HeroSection = () => {
           <Model />
         </Canvas>
       </div>
-    </>
+    </div>
   );
 };
 

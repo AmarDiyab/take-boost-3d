@@ -187,7 +187,6 @@ const IngredientsSection = () => {
   }, []);
 
   return (
-    <>
       <div className="mt-[10rem] mx-12 " id="last">
         <p className="flex flex-col items-start ml-10 text-[11vw] font-bold leading-[1]">
           <span className="">INGREDIENTS</span>
@@ -311,7 +310,6 @@ const IngredientsSection = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
