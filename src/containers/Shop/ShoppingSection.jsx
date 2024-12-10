@@ -16,7 +16,7 @@ const ShoppingSection = () => {
             </p> */}
           <Canvas
             className="w-full z-50 relative rotate-45 -mt-40"
-            id="canvas-about"
+            id="canvas-shop"
           >
             <ambientLight />
             <Model />
