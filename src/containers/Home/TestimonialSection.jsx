@@ -83,8 +83,8 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <div className="flex justify-between mt-40 pb-72 mb-20" id="testimony">
-      <div className="w-1/2">
+    <div className="flex max-lg:flex-col max-lg:items-center justify-between mt-40 pb-72 mb-20" id="testimony">
+      <div className="w-1/2 max-lg:w-full">
         <div
           className="border-2 border-orange rounded-full h-[600px] w-[600px] flex justify-center items-center text-8xl font-semibold -ml-10"
           id="testimonial-circle"
@@ -100,7 +100,7 @@ const TestimonialSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-10 items-center">
+        <div className="flex flex-col gap-10 items-center max-lg:hidden">
           <div
             className="p-5 border-orange border-2 rounded-lg w-[300px] h-[200px] relative -rotate-[8deg]"
             id="testimonial-card-4"
@@ -241,17 +241,17 @@ const TestimonialSection = () => {
         </div>
       </div>
 
-      <div className="w-[10%]"></div>
+      <div className="w-[10%] max-lg:hidden"></div>
 
-      <div className="w-[40%] flex flex-col gap-16" id="testimonial-right">
-        <div className="flex flex-col">
+      <div className="w-[40%] max-lg:w-full flex flex-col gap-16" id="testimonial-right">
+        <div className="flex flex-col max-lg:ml-12">
           <p className="text-3xl">
             WORD ON <br /> THE STREET
           </p>
           <p>Trust us with your immunity.</p>
         </div>
 
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 max-lg:items-center">
           <div
             className="p-5 border-orange border-2 rounded-lg w-[300px] h-[200px] relative -rotate-[8deg]"
             id="testimonial-card-1"

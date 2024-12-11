@@ -5,10 +5,24 @@ import orange from "../../assets/orange.png";
 import zinc from "../../assets/zinc.png";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin, useGSAP);
 
 const IngredientsSection = () => {
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
   useGSAP(() => {
     const ingredientSectionTimeline = gsap.timeline({
@@ -24,13 +38,13 @@ const IngredientsSection = () => {
     // BLUE MOLECULE ANIMATION
     ingredientSectionTimeline.to(".blue-molecule", {
       opacity: 1,
-      scale: 1.5,
+      scale: isMobile ? 0.75 :1.5,
       rotation: 45,
       stagger: 0.5,
     });
     ingredientSectionTimeline.to(".blue-molecule", {
       opacity: 0,
-      scale: 2,
+      scale: isMobile ? 1 : 2,
       rotation: 90,
       stagger: 0.5,
     });
@@ -95,13 +109,13 @@ const IngredientsSection = () => {
     // ORANGE ANIMATION
       ingredientSectionTimeline.to(".orange-slice", {
         opacity: 1,
-        scale: 1.5,
+        scale: isMobile ? 0.75 :1.5,
         rotation: 45,
         stagger: 0.5,
       });
     ingredientSectionTimeline.to(".orange-slice", {
       opacity: 0,
-      scale: 2,
+      scale: isMobile ? 1 :2,
       rotation: 90,
       stagger: 0.5,
     });
@@ -170,13 +184,13 @@ const IngredientsSection = () => {
 
     ingredientSectionTimeline.to(".zinc-piece", {
       opacity: 1,
-      scale: 1.5,
+      scale: isMobile ? 0.75 :1.5,
       rotation: 45,
       stagger: 0.5,
     });
     ingredientSectionTimeline.to(".zinc-piece", {
       opacity: 0,
-      scale: 2,
+      scale: isMobile ? 1 :2,
       rotation: 90,
       stagger: 0.5,
     });
@@ -187,7 +201,7 @@ const IngredientsSection = () => {
   }, []);
 
   return (
-      <div className="mt-[10rem] mx-12 " id="last">
+      <div className="mt-[10rem] max-lg:mt-[20rem] mx-12 " id="last">
         <p className="flex flex-col items-start ml-10 text-[11vw] font-bold leading-[1]">
           <span className="">INGREDIENTS</span>
           <span className="flex-auto self-end">
@@ -203,14 +217,14 @@ const IngredientsSection = () => {
 
         <div id="pin-container">
           <div id="ingredient-section">
-            <div className="h-screen flex justify-between items-center relative">
-              <div className="flex flex-col gap-3">
+            <div className="h-screen flex max-lg:flex-col  justify-between max-lg:justify-start items-center relative">
+              <div className="flex flex-col gap-3 max-lg:mt-60">
                 <p>INGREDIENTS</p>
                 <h4 className="text-7xl font-bold main-text-1">ELDERBERRY</h4>
                 <h4 className="text-7xl font-bold outline-text main-text-2">VITAMIN C</h4>
                 <h4 className="text-7xl font-bold outline-text main-text-3">ZINC</h4>
               </div>
-              <div className="flex flex-col gap-0 mr-[5rem]">
+              <div className="flex flex-col gap-0 mr-[5rem] max-lg:mt-20">
                 <p className="mb-2">BENEFITS</p>
                 <h5 className="my-1 text-xl benefit-text-1">
                   01. Improves Common Cold Symptoms
@@ -235,25 +249,25 @@ const IngredientsSection = () => {
               <img
                 src={blueMolecule}
                 alt="blue-molecule"
-                className="blue-molecule absolute -top-[7%] left-[10%] opacity-0"
+                className="blue-molecule absolute -top-[7%] left-[10%] max-lg:left-0 opacity-0 max-lg:scale-50"
                 width={250}
               />
               <img
                 src={blueMolecule}
                 alt="blue-molecule"
-                className="blue-molecule absolute -top-[10%] right-[5%] opacity-0"
+                className="blue-molecule absolute -top-[10%] right-[5%] max-lg:right-0 opacity-0 max-lg:scale-50"
                 width={350}
               />
               <img
                 src={blueMolecule}
                 alt="blue-molecule"
-                className="blue-molecule absolute -bottom-[15%] left-[7%] opacity-0"
+                className="blue-molecule absolute -bottom-[15%] left-[7%] opacity-0 max-lg:hidden"
                 width={350}
               />
               <img
                 src={blueMolecule}
                 alt="blue-molecule"
-                className="blue-molecule absolute -bottom-[5%] right-[10%] opacity-0"
+                className="blue-molecule absolute -bottom-[5%] right-[10%] opacity-0 max-lg:hidden"
                 width={250}
               />
 
@@ -272,13 +286,13 @@ const IngredientsSection = () => {
               <img
                 src={orange}
                 alt="orange"
-                className="orange-slice absolute -bottom-[15%] left-[7%] opacity-0"
+                className="orange-slice absolute -bottom-[15%] left-[7%] opacity-0 max-lg:hidden"
                 width={250}
               />
               <img
                 src={orange}
                 alt="orange"
-                className="orange-slice absolute -bottom-[5%] right-[10%] opacity-0"
+                className="orange-slice absolute -bottom-[5%] right-[10%] opacity-0 max-lg:hidden"
                 width={200}
               />
 
@@ -297,13 +311,13 @@ const IngredientsSection = () => {
               <img
                 src={zinc}
                 alt="zinc"
-                className="zinc-piece absolute -bottom-[15%] left-[7%] opacity-0"
+                className="zinc-piece absolute -bottom-[15%] left-[7%] opacity-0 max-lg:hidden"
                 width={250}
               />
               <img
                 src={zinc}
                 alt="zinc"
-                className="zinc-piece absolute -bottom-[5%] right-[10%] opacity-0"
+                className="zinc-piece absolute -bottom-[5%] right-[10%] opacity-0 max-lg:hidden"
                 width={200}
               />
             </div>

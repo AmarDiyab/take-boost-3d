@@ -36,10 +36,10 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <div className="h-screen flex justify-between">
+    <div className="h-screen flex max-lg:flex-col justify-between max-lg:items-start max-lg:gap-20">
       {/* <img src={arrow} alt="arrow" /> */}
       <div
-        className="border border-white rounded-full h-[80vh] w-[80vh] flex justify-center items-center text-8xl font-semibold -ml-10"
+        className="border border-white rounded-full h-[600px] w-[600px] min-h-[600px] min-w-[600px] flex justify-center items-center text-8xl font-semibold -ml-10"
         id="circle"
       >
         <p className="flex flex-col items-end ml-10" id="circle-text">
@@ -50,7 +50,7 @@ const AboutSection = () => {
         </p>
       </div>
 
-      <div className="flex flex-col justify-center max-w-[20%] mr-[10rem] gap-3">
+      <div className="flex flex-col justify-center max-w-[20%] max-lg:max-w-[50%] max-lg:mx-8 mr-[10rem] gap-3">
         <p className="text-xs">BOOST HELPS YOU GET SICK LESS</p>
         <h4 className="text-4xl font-semibold">
           BE PROACTIVE NOT REACTIVE ABOUT YOUR IMMUNITY
@@ -60,7 +60,7 @@ const AboutSection = () => {
           and it took us a pandemic to realize that. BOOST is here to fix that.
         </h6>
 
-        <button className="w-[80%] border-2 border-white rounded-full py-2 mt-3">
+        <button className="w-[80%] max-lg:w-full border-2 border-white rounded-full py-2 mt-3">
           BUY BOOST
         </button>
       </div>
