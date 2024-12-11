@@ -5,7 +5,7 @@ const ShoppingSection = () => {
   return (
     <div className="flex max-lg:flex-col justify-between pt-10 mr-10 max-lg:gap-20">
       <div className="w-1/2">
-        <div className="border-2 border-orange rounded-full h-[600px] w-[600px] flex justify-center items-center text-8xl font-semibold -ml-10">
+        <div className="border-2 border-orange rounded-full h-[600px] w-[600px] flex justify-center items-center text-8xl font-semibold -ml-10 max-md:-ml-32">
           {/* <p
               className="flex flex-col items-start ml-10 text-[5rem]"
             >
@@ -24,10 +24,10 @@ const ShoppingSection = () => {
         </div>
       </div>
       <div className="flex flex-col gap-5 w-1/2 max-lg:w-full max-lg:mx-8">
-        <h1 className="text-6xl font-extrabold">
+        <h1 className="text-6xl max-md:text-4xl font-extrabold">
           IMMUNITY <br /> GUMMY VITAMINS
         </h1>
-        <p className="text-lg">
+        <p className="text-lg max-md:text-base">
           BOOST immunity gummy vitamins are loaded with Elderberry, Vitamin C
           and Zinc — the three power ingredients that put your immune system on
           the offense. BOOST has 3g of sugar (half the amount of sugar as the

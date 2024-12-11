@@ -26,7 +26,7 @@ const IngredientsAccordion = () => {
         })
     }, [{scope: "#ingredient-accordion"}])
   return (
-    <div className='flex flex-col mx-40 max-lg:mx-12 mt-20' id='ingredient-accordion'>
+    <div className='flex flex-col mx-40 max-lg:mx-8 mt-20' id='ingredient-accordion'>
         <h3 className='text-[10rem] max-lg:text-6xl max-lg:leading-[4rem] font-extrabold leading-[11rem]'>WHAT&apos;S</h3>
         <div className='flex gap-10 items-end'>
             <p className='text-xl'>Peep the <br /> ingredients</p>
@@ -38,23 +38,31 @@ const IngredientsAccordion = () => {
           key="1"
           aria-label="Accordion 1"
           indicator={<IoIosClose size={60} />}
-          title="BRAND"
+          title="ELDERBERRY"
           className="[&_span]:text-white [&_span]:font-medium [&_span]:text-2xl [&_span]:ml-8 max-lg:[&_span]:ml-2 [&>h2>button>span]:-rotate-45"
         >                
             </AccordionItem>
             <AccordionItem
-          key="1"
+          key="2"
           aria-label="Accordion 2"
           indicator={<IoIosClose size={60} />}
-          title="BRAND"
+          title="VITAMIN C"
           className="[&_span]:text-white [&_span]:font-medium [&_span]:text-2xl [&_span]:ml-8 max-lg:[&_span]:ml-2 [&>h2>button>span]:-rotate-45"
         >                
             </AccordionItem>
             <AccordionItem
-          key="1"
+          key="3"
           aria-label="Accordion 3"
           indicator={<IoIosClose size={60} />}
-          title="BRAND"
+          title="ZINC"
+          className="[&_span]:text-white [&_span]:font-medium [&_span]:text-2xl [&_span]:ml-8 max-lg:[&_span]:ml-2 [&>h2>button>span]:-rotate-45"
+        >                
+            </AccordionItem>
+            <AccordionItem
+          key="4"
+          aria-label="Accordion 3"
+          indicator={<IoIosClose size={60} />}
+          title="INACTIVE INGREDIENTS"
           className="[&_span]:text-white [&_span]:font-medium [&_span]:text-2xl [&_span]:ml-8 max-lg:[&_span]:ml-2 [&>h2>button>span]:-rotate-45"
         >                
             </AccordionItem>
