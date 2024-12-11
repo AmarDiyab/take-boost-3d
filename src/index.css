@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  cursor: none !important;
+}
 
 body {
   background: linear-gradient(to left, #fe710b, #ffb804);
