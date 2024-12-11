@@ -2,7 +2,7 @@
 const LargeTextSection = () => {
   return (
     <div className="mx-5 max-lg:mx-4 mb-20">
-      <h2 className="text-[12rem] max-lg:text-6xl leading-[12rem] max-lg:leading-[5rem] px-12 flex flex-col font-extrabold">
+      <h2 className="text-[12rem] md:max-lg:text-6xl max-md:text-5xl leading-[12rem] max-lg:leading-[5rem] px-12 flex flex-col font-extrabold">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VEGAN <br />
          NON-GMO <br />
          <div className="flex justify-between w-full">

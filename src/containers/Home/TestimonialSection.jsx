@@ -90,7 +90,7 @@ const TestimonialSection = () => {
           id="testimonial-circle"
         >
           <p
-            className="flex flex-col items-start ml-10 text-[5rem]"
+            className="flex flex-col items-start ml-10 text-[5rem] max-md:text-5xl max-md:-ml-16"
             id="circle-text2"
           >
             <span className="1">LET THE</span>

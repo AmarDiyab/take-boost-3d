@@ -5,10 +5,10 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <section className={`flex justify-between items-center w-full py-7 px-12 ${location.pathname === "/shop" ? "bg-white text-black " : ""}`}>
+    <section className={`flex justify-between max-md:justify-center items-center w-full py-7 px-12 ${location.pathname === "/shop" ? "bg-white text-black " : ""}`}>
         <img src={logo} alt="logo" width={120} className='fill-black'/>
 
-        <div className={`flex border-2 ${location.pathname === "/shop" ? "border-black" : "border-white"} rounded-lg cursor pointer`}>
+        <div className={`flex border-2 ${location.pathname === "/shop" ? "border-black" : "border-white"} rounded-lg cursor pointer max-md:hidden`}>
           <Link to='/shop' >
             <p className='py-2 px-7 text-lg hover:font-bold'>SHOP</p>
           </Link>
@@ -17,7 +17,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className={`flex border-2 ${location.pathname === "/shop" ? "border-black" : "border-white"} rounded-full`}>
+        <div className={`flex border-2 ${location.pathname === "/shop" ? "border-black" : "border-white"} rounded-full max-md:hidden`}>
             <p className='py-2 px-7 text-lg'>CART</p>
         </div>
     </section>

@@ -57,14 +57,14 @@ const IngredientsSection = () => {
     ingredientSectionTimeline.to(
       ".main-text-1",
       {
-        className: "text-7xl font-bold main-text-1 outline-text",
+        className: "text-7xl max-md:text-4xl font-bold main-text-1 outline-text",
       },
       "<"
     );
     ingredientSectionTimeline.to(
       ".main-text-2",
       {
-        className: "text-7xl font-bold main-text-2",
+        className: "text-7xl max-md:text-4xl font-bold main-text-2",
       },
       "<"
     );
@@ -133,14 +133,14 @@ const IngredientsSection = () => {
     ingredientSectionTimeline.to(
       ".main-text-2",
       {
-        className: "text-7xl font-bold main-text-1 outline-text",
+        className: "text-7xl max-md:text-4xl font-bold main-text-1 outline-text",
       },
       "<"
     );
     ingredientSectionTimeline.to(
       ".main-text-3",
       {
-        className: "text-7xl font-bold main-text-3",
+        className: "text-7xl max-md:text-4xl font-bold main-text-3",
       },
       "<"
     );
@@ -201,8 +201,8 @@ const IngredientsSection = () => {
   }, []);
 
   return (
-      <div className="mt-[10rem] max-lg:mt-[20rem] mx-12 " id="last">
-        <p className="flex flex-col items-start ml-10 text-[11vw] font-bold leading-[1]">
+      <div className="mt-[10rem] max-lg:mt-[20rem] mx-12 max-md:mx-4 " id="last">
+        <p className="flex flex-col items-start ml-10 max-md:ml-0 text-[11vw] font-bold leading-[1]">
           <span className="">INGREDIENTS</span>
           <span className="flex-auto self-end">
             <p className="text-[11vw] leading-[1] font-bold flex items-center ">
@@ -217,12 +217,12 @@ const IngredientsSection = () => {
 
         <div id="pin-container">
           <div id="ingredient-section">
-            <div className="h-screen flex max-lg:flex-col  justify-between max-lg:justify-start items-center relative">
+            <div className="h-screen flex max-lg:flex-col justify-between max-lg:justify-start items-center max-md:items-start relative">
               <div className="flex flex-col gap-3 max-lg:mt-60">
                 <p>INGREDIENTS</p>
-                <h4 className="text-7xl font-bold main-text-1">ELDERBERRY</h4>
-                <h4 className="text-7xl font-bold outline-text main-text-2">VITAMIN C</h4>
-                <h4 className="text-7xl font-bold outline-text main-text-3">ZINC</h4>
+                <h4 className="text-7xl max-md:text-4xl font-bold main-text-1">ELDERBERRY</h4>
+                <h4 className="text-7xl max-md:text-4xl font-bold outline-text main-text-2">VITAMIN C</h4>
+                <h4 className="text-7xl max-md:text-4xl font-bold outline-text main-text-3">ZINC</h4>
               </div>
               <div className="flex flex-col gap-0 mr-[5rem] max-lg:mt-20">
                 <p className="mb-2">BENEFITS</p>
@@ -249,7 +249,7 @@ const IngredientsSection = () => {
               <img
                 src={blueMolecule}
                 alt="blue-molecule"
-                className="blue-molecule absolute -top-[7%] left-[10%] max-lg:left-0 opacity-0 max-lg:scale-50"
+                className="blue-molecule absolute -top-[7%] left-[10%] max-lg:left-0 opacity-0 max-lg:scale-50 max-md:hidden"
                 width={250}
               />
               <img

@@ -39,10 +39,10 @@ const AboutSection = () => {
     <div className="h-screen flex max-lg:flex-col justify-between max-lg:items-start max-lg:gap-20">
       {/* <img src={arrow} alt="arrow" /> */}
       <div
-        className="border border-white rounded-full h-[600px] w-[600px] min-h-[600px] min-w-[600px] flex justify-center items-center text-8xl font-semibold -ml-10"
+        className="border border-white rounded-full h-[600px] w-[600px] min-h-[600px] min-w-[600px] flex justify-center items-center text-8xl max-md:text-7xl font-semibold -ml-10"
         id="circle"
       >
-        <p className="flex flex-col items-end ml-10" id="circle-text">
+        <p className="flex flex-col items-end ml-10 max-md:-ml-10" id="circle-text">
           <span className="1">STAY</span>
           <span className="flex-auto self-start">SICK 🤙 </span>
           <span className="3">🤧 NOT</span>
@@ -52,7 +52,7 @@ const AboutSection = () => {
 
       <div className="flex flex-col justify-center max-w-[20%] max-lg:max-w-[50%] max-lg:mx-8 mr-[10rem] gap-3">
         <p className="text-xs">BOOST HELPS YOU GET SICK LESS</p>
-        <h4 className="text-4xl font-semibold">
+        <h4 className="text-4xl max-md:text-2xl font-semibold">
           BE PROACTIVE NOT REACTIVE ABOUT YOUR IMMUNITY
         </h4>
         <h6 className="text-xl">
