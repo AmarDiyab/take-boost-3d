@@ -14,9 +14,9 @@ const WhoWeAreSection = () => {
           them.
         </p>
       </div>
-      <div className="w-1/2 h-full ml-20 max-lg:absolute max-lg:top-0 max-lg:-right-20">
+      <div className="w-full h-full ml-20 max-lg:absolute max-lg:top-0 md:max-lg:-right-20 max-md:-right-40 max-md:scale-80">
       <div className="h-[600px]">
-        <Canvas className="w-full z-50 -mt-60">
+        <Canvas className="w-full z-50 -mt-60 max-md:-mt-72">
           <ambientLight />
           <Model />
         </Canvas>
