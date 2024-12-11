@@ -10,18 +10,21 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import model from './assets/model/WawaOffice.glb';
+import { useLocation } from 'react-router';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 export function Model(props) {
   const { nodes, materials } = useGLTF(model)
 
+  const location = useLocation();
+
   const groupRef = useRef();
   const meshRef = useRef();
 
   useGSAP(() => {
     gsap.to(meshRef.current.rotation, {
-      y: Math.PI * 10,
+      y: location.pathname === "/shop" ? Math.PI * 2 : Math.PI * 10,
       scrollTrigger: {
         trigger: document.body,
         start: 'top top',

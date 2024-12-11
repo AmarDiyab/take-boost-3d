@@ -17,9 +17,11 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className={`flex border-2 ${location.pathname === "/shop" ? "border-black" : "border-white"} rounded-full max-md:hidden`}>
+        <div></div>
+
+        {/* <div className={`flex border-2 ${location.pathname === "/shop" ? "border-black" : "border-white"} rounded-full max-md:hidden`}>
             <p className='py-2 px-7 text-lg'>CART</p>
-        </div>
+        </div> */}
     </section>
   )
 }
