@@ -22,10 +22,10 @@ useGSAP(() => {
         start: "top top",
         end: "bottom bottom",
         scrub: true,
-        markers: {
-          startColor: "purple",
-          endColor: "purple",
-        }
+        // markers: {
+        //   startColor: "purple",
+        //   endColor: "purple",
+        // }
       },
     });
 

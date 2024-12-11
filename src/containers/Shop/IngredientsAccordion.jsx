@@ -16,7 +16,7 @@ const IngredientsAccordion = () => {
                 start: "top center",
                 end: "top+=25 center",
                 scrub: true,
-                markers: true
+                // markers: true
             }
         })
 
