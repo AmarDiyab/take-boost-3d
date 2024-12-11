@@ -1,12 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo.jsx';
+import Logo from '../assets/logo.jsx';
 
 const Navbar = () => {
   const location = useLocation();
 
   return (
     <section className={`flex justify-between max-md:justify-center items-center w-full py-7 px-12 ${location.pathname === "/shop" ? "bg-white text-black " : ""}`}>
-        <img src={logo} alt="logo" width={120} className='fill-black'/>
+        <Logo fill={location.pathname === "/shop" ? "black" : "white"} />
 
         <div className={`flex border-2 ${location.pathname === "/shop" ? "border-black" : "border-white"} rounded-lg cursor pointer max-md:hidden`}>
           <Link to='/shop' >
