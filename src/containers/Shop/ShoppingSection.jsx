@@ -3,7 +3,7 @@ import { Model } from "../../WawaOffice";
 
 const ShoppingSection = () => {
   return (
-    <div className="flex justify-between pt-10 mr-10">
+    <div className="flex max-lg:flex-col justify-between pt-10 mr-10 max-lg:gap-20">
       <div className="w-1/2">
         <div className="border-2 border-orange rounded-full h-[600px] w-[600px] flex justify-center items-center text-8xl font-semibold -ml-10">
           {/* <p
@@ -23,7 +23,7 @@ const ShoppingSection = () => {
           </Canvas>
         </div>
       </div>
-      <div className="flex flex-col gap-5 w-1/2">
+      <div className="flex flex-col gap-5 w-1/2 max-lg:w-full max-lg:mx-8">
         <h1 className="text-6xl font-extrabold">
           IMMUNITY <br /> GUMMY VITAMINS
         </h1>
@@ -35,7 +35,7 @@ const ShoppingSection = () => {
         </p>
         <h5 className="text-3xl font-semibold">BECAUSE BEING SICK SUCKS</h5>
         <hr className="-mt-4" />
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-5">
           <div className="flex flex-col gap-3 p-5 w-full h-[250px] border border-black rounded-3xl">
             <div className="flex justify-between">
               <p className="text-xl">

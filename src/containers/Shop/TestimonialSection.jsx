@@ -1,9 +1,24 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 const TestimonialSection = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -18,18 +33,23 @@ const TestimonialSection = () => {
       },
     });
 
-    tl.to(
-      "#shop-testimonial-card-1",
-      {
-        x: -100,
-      },
-      "<"
-    );
-    tl.to("#shop-testimonial-card-2", { x: -50 }, "<");
-    tl.to("#shop-testimonial-card-3", { x: -25 }, "<");
+    if (!isMobile) {
+      tl.to(
+        "#shop-testimonial-card-1",
+        {
+          x: -100,
+        },
+        "<"
+      );
+      tl.to("#shop-testimonial-card-2", { x: -50 }, "<");
+      tl.to("#shop-testimonial-card-3", { x: -25 }, "<");
+    }
   });
   return (
-    <div className="flex gap-10 mt-40 items-end" id="shop-testimonial">
+    <div
+      className="flex gap-10 mt-40 items-end max-lg:flex-col max-lg:items-center"
+      id="shop-testimonial"
+    >
       <div className="border-2 border-white rounded-full w-[400px] h-[400px] flex justify-center items-center text-8xl font-semibold -ml-10">
         <p className="flex flex-col items-start ml-10 text-[3rem]">
           <span className="1">WORD ON</span>
@@ -40,7 +60,7 @@ const TestimonialSection = () => {
         </p>
       </div>
 
-      <div className="flex gap-10">
+      <div className="flex max-lg:flex-col gap-10 max-lg:gap-16 max-lg:items-center">
         <div
           className="p-5 border-orange bg-white text-black border-2 rounded-lg w-[300px] h-[200px]
         relative rotate-6"
