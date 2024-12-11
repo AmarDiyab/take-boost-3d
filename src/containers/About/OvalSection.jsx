@@ -17,7 +17,13 @@ const OvalSection = ({ FAQ }) => {
               strokeWidth="1.5"
             ></path>
           </svg>
-          <div>
+          <div
+            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:hidden border border-${
+              FAQ ? "orange" : "white"
+            } rounded-full h-[400px] w-[400px] min-h-[400px] min-w-[400px] flex max-lg:flex-col justify-center items-center text-8xl max-md:text-7xl font-semibold -ml-10`}
+          >
+                      </div>
+            {" "}
             <div className="w-3/4 max-lg:w-3/4">
               <h3 className="text-7xl max-lg:text-2xl font-extrabold uppercase">
                 We make products to help you feel good while still tasting 👅
@@ -31,7 +37,6 @@ const OvalSection = ({ FAQ }) => {
                 thank you later.
               </p>
             </div>
-          </div>
         </div>
       </div>
     </div>
