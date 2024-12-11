@@ -60,7 +60,7 @@ const AboutSection = () => {
           and it took us a pandemic to realize that. BOOST is here to fix that.
         </h6>
 
-        <button className="w-[80%] max-lg:w-full border-2 border-white rounded-full py-2 mt-3">
+        <button className="w-[80%] max-lg:w-full border-2 border-white rounded-full py-2 mt-3 hover:text-black hover:bg-white duration-300">
           BUY BOOST
         </button>
       </div>

@@ -1,7 +1,17 @@
 import { Canvas } from "@react-three/fiber";
 import { Model } from "../../WawaOffice";
+import { useEffect, useState } from "react";
 
 const ShoppingSection = () => {
+  const [selected, setSelected] = useState(null);
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  useEffect(() => {
+    if (selected !== null) {
+      setIsDisabled(false);
+    }
+  }, [selected]);
+
   return (
     <div className="flex max-lg:flex-col justify-between pt-10 mr-10 max-lg:gap-20">
       <div className="w-1/2">
@@ -36,14 +46,23 @@ const ShoppingSection = () => {
         <h5 className="text-3xl font-semibold">BECAUSE BEING SICK SUCKS</h5>
         <hr className="-mt-4" />
         <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-5">
-          <div className="flex flex-col gap-3 p-5 w-full h-[250px] border border-black rounded-3xl">
+          <div
+            onClick={() => setSelected(1)}
+            className={`flex flex-col gap-3 p-5 w-full h-[250px] border border-black hover:border-orange hover:bg-orange group rounded-3xl duration-300 ${
+              selected === 1 ? "bg-orange border-orange" : ""
+            }`}
+          >
             <div className="flex justify-between">
               <p className="text-xl">
                 SINGLE <br /> PURCHASE
               </p>
               <p className="text-xl">$ 35.00</p>
             </div>
-            <hr className="-mx-5 border-black" />
+            <hr
+              className={`-mx-5 border-black group-hover:border-white ${
+                selected === 1 ? "border-white" : ""
+              }`}
+            />
             <div className="flex flex-col gap-1 text-sm">
               <p>+ ONE BOTTLE</p>
               <p>+ ONE BOTTLE</p>
@@ -54,14 +73,23 @@ const ShoppingSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-3 p-5 w-full h-[250px] border border-black rounded-3xl">
+          <div
+            onClick={() => setSelected(2)}
+            className={`flex flex-col gap-3 p-5 w-full h-[250px] border border-black hover:border-orange hover:bg-orange group rounded-3xl duration-300 ${
+              selected === 2 ? "bg-orange border-orange" : ""
+            }`}
+          >
             <div className="flex justify-between">
               <p className="text-xl">
                 SUBSCRIBE <br /> AND SAVE
               </p>
               <p className="text-xl">$ 30.00</p>
             </div>
-            <hr className="-mx-5 border-black" />
+            <hr
+              className={`-mx-5 border-black group-hover:border-white ${
+                selected === 2 ? "border-white" : ""
+              }`}
+            />
             <div className="flex flex-col gap-1 text-sm">
               <p>+ ONE BOTTLE</p>
               <p>+ ONE BOTTLE</p>
@@ -72,7 +100,13 @@ const ShoppingSection = () => {
             </div>
           </div>
         </div>
-        <button className="w-full flex justify-center py-3 border border-black rounded-full">
+
+        <button
+          disabled={isDisabled}
+          className={`w-full flex justify-center py-3 border text-white ${
+            !isDisabled ? "bg-orange hover:bg-purple-600 border-orange hover:border-purple-600" : "bg-gray-500 border-gray-500"
+          } duration-300 rounded-full`}
+        >
           ADD TO CART
         </button>
       </div>

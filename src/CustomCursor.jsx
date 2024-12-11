@@ -24,8 +24,8 @@ export default function CursorFollower() {
         target?.closest("a") || target?.closest("button");
       // using the GSAP power to animate some properties
       gsap.to(cursor, {
-        x: x,
-        y: y,
+        x: x + 3,
+        y: y + 3,
         duration: 0.7,
         // ease: "power4",
         opacity: isTargetLinkOrBtn ? 1 : 1,
