@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 const MarqueeSection = () => {
   return (
-    <div className="py-40">
+    <div className="py-40 max-lg:py-20">
       <Marquee direction="left" autoFill speed={50} className="relative">
         <div className="flex gap-2 w-full justify-between pl-2 text-xl font-bold">
           <p>DONT PANIC, TAKE BOOST ;</p>

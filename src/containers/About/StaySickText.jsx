@@ -35,7 +35,7 @@ const StaySickText = ({setFAQ}) => {
       className="flex w-full justify-center items-center mt-20"
       id="sick-text"
     >
-      <h4 className="about-parallax text-8xl font-bold uppercase">
+      <h4 className="about-parallax text-8xl max-md:text-6xl font-bold uppercase">
         Stay sick 🤙 <br /> 🤧 not sick
       </h4>
     </div>
