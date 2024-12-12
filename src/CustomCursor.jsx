@@ -29,7 +29,7 @@ export default function CursorFollower() {
         duration: 0.7,
         // ease: "power4",
         opacity: isTargetLinkOrBtn ? 1 : 1,
-        background: isTargetLinkOrBtn ? "purple" : "",
+        background: isTargetLinkOrBtn ? "linear-gradient(to left, #8010e2, #e444d4)" : "",
         borderColor: isTargetLinkOrBtn ? "purple" : "",
         transform: `scale(${isTargetLinkOrBtn ? 0.7 : 1})`,
       });

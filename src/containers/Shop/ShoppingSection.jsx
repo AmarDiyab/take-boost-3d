@@ -48,8 +48,8 @@ const ShoppingSection = () => {
         <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-5">
           <div
             onClick={() => setSelected(1)}
-            className={`flex flex-col gap-3 p-5 w-full h-[250px] border border-black hover:border-orange hover:bg-orange group rounded-3xl duration-300 ${
-              selected === 1 ? "bg-orange border-orange" : ""
+            className={`flex flex-col gap-3 p-5 w-full h-[250px] border border-black hover:border-orange hover:bg-gradient-to-tl hover:from-[#fe710b] hover:to-[#ffb804] group rounded-3xl duration-300 ${
+              selected === 1 ? "bg-gradient-to-tl from-[#fe710b] to-[#ffb804] border-orange" : ""
             }`}
           >
             <div className="flex justify-between">
@@ -75,8 +75,8 @@ const ShoppingSection = () => {
 
           <div
             onClick={() => setSelected(2)}
-            className={`flex flex-col gap-3 p-5 w-full h-[250px] border border-black hover:border-orange hover:bg-orange group rounded-3xl duration-300 ${
-              selected === 2 ? "bg-orange border-orange" : ""
+            className={`flex flex-col gap-3 p-5 w-full h-[250px] border border-black hover:bg-gradient-to-tl hover:from-[#fe710b] hover:to-[#ffb804] hover:border-orange group rounded-3xl duration-300 ${
+              selected === 2 ? "bg-gradient-to-tl from-[#fe710b] to-[#ffb804] border-orange" : ""
             }`}
           >
             <div className="flex justify-between">
@@ -104,7 +104,7 @@ const ShoppingSection = () => {
         <button
           disabled={isDisabled}
           className={`w-full flex justify-center py-3 border text-white ${
-            !isDisabled ? "bg-orange hover:bg-purple-600 border-orange hover:border-purple-600" : "bg-gray-500 border-gray-500"
+            !isDisabled ? "bg-gradient-to-tl from-[#fe710b] to-[#ffb804] hover:bg-gradient-to-l hover:from-[#8010e2] hover:to-[#e444d4] border-orange hover:border-purple-600" : "bg-gradient-to-l from-[#8d8d8d] to-[#b3b3b3] border-[#b3b3b3]"
           } duration-300 rounded-full`}
         >
           ADD TO CART
