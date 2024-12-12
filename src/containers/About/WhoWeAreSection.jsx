@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { Model } from "../../WawaOfficeAbout";
+import Model from "../../OrangeBottle";
 
 const WhoWeAreSection = () => {
   return (
@@ -18,6 +18,7 @@ const WhoWeAreSection = () => {
       <div className="h-[600px]">
         <Canvas className="w-full z-50 -mt-60 max-md:-mt-72">
           <ambientLight />
+          <directionalLight position={[0, 0, 1]} intensity={1} />
           <Model />
         </Canvas>
       </div>
