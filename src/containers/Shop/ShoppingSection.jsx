@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { Model } from "../../WawaOffice";
+import Model from "../../OrangeBottle";
 import { useEffect, useState } from "react";
 
 const ShoppingSection = () => {
@@ -28,7 +28,7 @@ const ShoppingSection = () => {
             className="w-full z-50 relative rotate-45 -mt-40"
             id="canvas-shop"
           >
-            <ambientLight />
+            <directionalLight position={[0, 0, 1]} intensity={1} />
             <Model />
           </Canvas>
         </div>

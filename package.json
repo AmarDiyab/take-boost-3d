@@ -19,6 +19,7 @@
     "@studio-freight/react-lenis": "^0.0.47",
     "framer-motion": "^11.13.3",
     "gsap": "^3.12.5",
+    "leva": "^0.9.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.5",
