@@ -50,7 +50,7 @@ const IngredientsSection = () => {
     });
     // BG TRANSITION 1
     ingredientSectionTimeline.to(document.body, {
-      background: "rgb(111, 0, 255)",
+      background: "linear-gradient(to left top, #6f00ff, #929dff)",
       duration: 0,
     });
     // OUTLINE TRANSITION 1
@@ -119,9 +119,10 @@ const IngredientsSection = () => {
       rotation: 90,
       stagger: 0.5,
     });
+    
     // BG TRANSITION 2
     ingredientSectionTimeline.to(document.body, {
-      background: "#acb3ff",
+      background: "linear-gradient(to left top, #a9b0ff, #ffffff10, #dbdfff)",
       color: "black",
       duration: 0,
     });
@@ -129,18 +130,25 @@ const IngredientsSection = () => {
     //   color: "black",
     //   duration: 0.5,
     // });
-    // OUTLINE TRANSITION 1
+    // OUTLINE TRANSITION 2
+    ingredientSectionTimeline.to(
+      ".main-text-1",
+      {
+        className: "text-7xl max-md:text-4xl font-bold main-text-1 main-text-black outline-text-black",
+      },
+      "<"
+    );
     ingredientSectionTimeline.to(
       ".main-text-2",
       {
-        className: "text-7xl max-md:text-4xl font-bold main-text-1 outline-text",
+        className: "text-7xl max-md:text-4xl font-bold main-text-2 main-text-black outline-text-black",
       },
       "<"
     );
     ingredientSectionTimeline.to(
       ".main-text-3",
       {
-        className: "text-7xl max-md:text-4xl font-bold main-text-3",
+        className: "text-7xl max-md:text-4xl font-bold main-text-3 main-text-black",
       },
       "<"
     );

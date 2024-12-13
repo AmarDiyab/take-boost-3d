@@ -24,3 +24,17 @@ body {
     transition: color 0.5s cubic-bezier(.4,.4,.7,.85);
     -webkit-transition: color 0.5s cubic-bezier(.4,.4,.7,.85);
 }
+
+.main-text-black {
+  color: black !important;
+  -webkit-text-stroke: black !important;
+  transition: color 0.5s cubic-bezier(.4,.4,.7,.85);
+  -webkit-transition: color 0.5s cubic-bezier(.4,.4,.7,.85);
+}
+
+.outline-text-black {
+  color: transparent !important;
+  -webkit-text-stroke: 1px black !important;
+  transition: color 0.5s cubic-bezier(.4,.4,.7,.85);
+  -webkit-transition: color 0.5s cubic-bezier(.4,.4,.7,.85);
+}
