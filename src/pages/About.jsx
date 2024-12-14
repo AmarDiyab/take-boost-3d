@@ -31,6 +31,10 @@ useGSAP(() => {
 
     tl.to(".about-parallax", { y: "-200" }, "<");
   },    
+
+  gsap.to(document.body, {
+    background: "linear-gradient(to left, #fe710b, #ffb804)"
+  })
   )
   return (
     <div>
