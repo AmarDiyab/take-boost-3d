@@ -18,7 +18,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div></div>
+        <div className='w-[150px]'></div>
 
         {/* <div className={`flex border-2 ${location.pathname === "/shop" ? "border-black" : "border-white"} rounded-full max-md:hidden`}>
             <p className='py-2 px-7 text-lg'>CART</p>
